@@ -1,0 +1,1163 @@
+# importing code bases
+from tkinter import *
+import random
+import time
+import datetime
+from tkinter import Tk, StringVar, ttk, messagebox
+
+# Main Window
+root = Tk()
+root.geometry("1400x750+0+0")
+root.title("Dream Pizzas")
+
+# Title
+Tops = Frame(root, width=1350, height=100, bd=12, relief="raise")
+Tops.pack(side=TOP)
+FastFood = Label(Tops, font=("arial", 50, "bold"), text="""   Dream Pizzas   """)
+FastFood.grid(row=1, column=0)
+FastFood1 = Label(Tops, font=("arial", 12, "bold"), text="""""")
+FastFood1.grid(row=0, column=0)
+FastFood2 = Label(Tops, font=("arial", 12, "bold"), text="""""")
+FastFood2.grid(row=2, column=0)
+
+# Borders
+BottomMainFrame = Frame(root, width=1350, height=650, bd=12, relief="raise")
+BottomMainFrame.pack(side=BOTTOM)
+
+f1 = Frame(BottomMainFrame, width=450, height=650, bd=12, relief="raise")
+f1.pack(side=LEFT)
+f2 = Frame(BottomMainFrame, width=450, height=650, bd=12, relief="raise")
+f2.pack(side=LEFT)
+f2Top = Frame(f2, width=450, height=300, bd=12, relief="raise")
+f2Top.pack(side=TOP)
+f2Bottom = Frame(f2, width=450, height=350, bd=12, relief="raise")
+f2Bottom.pack(side=BOTTOM)
+f3 = Frame(BottomMainFrame, width=450, height=650, bd=12, relief="raise")
+f3.pack(side=RIGHT)
+f3Top = Frame(f3, width=500, height=350, bd=12, relief="raise")
+f3Top.pack(side=TOP)
+f3Bottom = Frame(f3, width=500, height=300, bd=12, relief="raise")
+f3Bottom.pack(side=BOTTOM)
+
+
+# Variables
+var1 = IntVar()
+var2 = IntVar()
+var3 = IntVar()
+var4 = IntVar()
+var5 = IntVar()
+var6 = IntVar()
+var7 = IntVar()
+var8 = IntVar()
+var9 = IntVar()
+var10 = IntVar()
+var11 = IntVar()
+var12 = IntVar()
+var13 = IntVar()
+var14 = IntVar()
+var15 = IntVar()
+var16 = IntVar()
+var17 = IntVar()
+var18 = IntVar()
+var19 = IntVar()
+var20 = IntVar()
+var21 = IntVar()
+var22 = IntVar()
+var23 = IntVar()
+var24 = IntVar()
+var25 = IntVar()
+
+var1.set(0)
+var2.set(0)
+var3.set(0)
+var4.set(0)
+var5.set(0)
+var6.set(0)
+var7.set(0)
+var8.set(0)
+var9.set(0)
+var10.set(0)
+var11.set(0)
+var12.set(0)
+var13.set(0)
+var14.set(0)
+var15.set(0)
+var16.set(0)
+var17.set(0)
+var18.set(0)
+var19.set(0)
+var20.set(0)
+var21.set(0)
+var22.set(0)
+var23.set(0)
+var24.set(0)
+var25.set(0)
+
+varCheesePizza = StringVar()
+varHawaiianPizza = StringVar()
+varMeatLoversPizza = StringVar()
+varPepperoniPizza = StringVar()
+varMargheritaPizza = StringVar()
+varBBQChickenPizza = StringVar()
+varGarlicCheesePizza = StringVar()
+varVegeterianPizza = StringVar()
+varNewYorkerPizza = StringVar()
+varStuffedCrustPizza = StringVar()
+varSeafoodPizza = StringVar()
+varFries = StringVar()
+varChurros = StringVar()
+varNachos = StringVar()
+varSundae = StringVar()
+varWedges = StringVar()
+varWater = StringVar()
+varCoke = StringVar()
+varFanta = StringVar()
+varSprite = StringVar()
+varJuice = StringVar()
+varChange = StringVar()
+varSubTotal = StringVar()
+varTotal = StringVar()
+varTax = StringVar()
+varName = StringVar()
+varPayment = StringVar()
+varPhoneNumber = StringVar()
+varAddress = StringVar()
+varHamCheesePizza = StringVar()
+
+varCheesePizza.set("0")
+varHawaiianPizza.set("0")
+varMeatLoversPizza.set("0")
+varPepperoniPizza.set("0")
+varMargheritaPizza.set("0")
+varBBQChickenPizza.set("0")
+varGarlicCheesePizza.set("0")
+varVegeterianPizza.set("0")
+varNewYorkerPizza.set("0")
+varStuffedCrustPizza.set("0")
+varSeafoodPizza.set("0")
+varFries.set("0")
+varChurros.set("0")
+varNachos.set("0")
+varSundae.set("0")
+varWedges.set("0")
+varWater.set("0")
+varCoke.set("0")
+varFanta.set("0")
+varSprite.set("0")
+varJuice.set("0")
+varTotal.set("0")
+varChange.set("0")
+varSubTotal.set("0")
+varTax.set("0")
+varName.set("")
+varPayment.set("0")
+varPhoneNumber.set("0")
+varAddress.set("")
+varHamCheesePizza.set("0")
+
+# exit button
+def iExit():
+    qExit = messagebox.askyesno("Fast Food", "Do you want to quit?")
+    if qExit > 0:
+        root.destroy()
+        return
+
+
+# Reset Button
+def reset():
+    varCheesePizza.set("0")
+    varHamCheesePizza.set("0")
+    varHawaiianPizza.set("0")
+    varMeatLoversPizza.set("0")
+    varPepperoniPizza.set("0")
+    varMargheritaPizza.set("0")
+    varBBQChickenPizza.set("0")
+    varGarlicCheesePizza.set("0")
+    varVegeterianPizza.set("0")
+    varNewYorkerPizza.set("0")
+    varStuffedCrustPizza.set("0")
+    varSeafoodPizza.set("0")
+    varFries.set("0")
+    varChurros.set("0")
+    varNachos.set("0")
+    varSundae.set("0")
+    varWedges.set("0")
+    varWater.set("0")
+    varCoke.set("0")
+    varFanta.set("0")
+    varSprite.set("0")
+    varJuice.set("0")
+    varTotal.set("0")
+
+    varSubTotal.set("0")
+    varTax.set("0")
+    varPayment.set("0")
+    varPhoneNumber.set("0")
+    varAddress.set("")
+    varName.set("")
+
+    spinCheesePizza.configure(state=DISABLED)
+    spinHawaiianPizza.configure(state=DISABLED)
+    spinMeatLoversPizza.configure(state=DISABLED)
+    spinPepperoniPizza.configure(state=DISABLED)
+    spinMargheritaPizza.configure(state=DISABLED)
+    spinBBQChickenPizza.configure(state=DISABLED)
+    spinGarlicCheesePizza.configure(state=DISABLED)
+    spinVegeterianPizza.configure(state=DISABLED)
+    spinNewYorkerPizza.configure(state=DISABLED)
+    spinStuffedCrustPizza.configure(state=DISABLED)
+    spinSeafoodPizza.configure(state=DISABLED)
+    spinFries.configure(state=DISABLED)
+    spinChurros.configure(state=DISABLED)
+    spinWedges.configure(state=DISABLED)
+    spinNachos.configure(state=DISABLED)
+    spinSundae.configure(state=DISABLED)
+    spinWater.configure(state=DISABLED)
+    spinCoke.configure(state=DISABLED)
+    spinFanta.configure(state=DISABLED)
+    spinSprite.configure(state=DISABLED)
+    spinJuice.configure(state=DISABLED)
+    spinHamCheesePizza.configure(state=DISABLED)
+    txtAddress.configure(state=DISABLED)
+    txtPhoneNumber.configure(state=DISABLED)
+
+
+# checkboxes
+def chkCheese():
+    if var1.get() == 1:
+        spinCheesePizza.configure(state=NORMAL)
+    elif var1.get() == 0:
+        spinCheesePizza.configure(state=DISABLED)
+
+
+def chkHawaiian():
+    if var2.get() == 1:
+        spinHawaiianPizza.configure(state=NORMAL)
+    elif var2.get() == 0:
+        spinHawaiianPizza.configure(state=DISABLED)
+
+
+def chkMeat():
+    if var3.get() == 1:
+        spinMeatLoversPizza.configure(state=NORMAL)
+    elif var3.get() == 0:
+        spinMeatLoversPizza.configure(state=DISABLED)
+
+
+def chkPepperoni():
+    if var4.get() == 1:
+        spinPepperoniPizza.configure(state=NORMAL)
+    elif var4.get() == 0:
+        spinPepperoniPizza.configure(state=DISABLED)
+
+
+def chkMargherita():
+    if var5.get() == 1:
+        spinMargheritaPizza.configure(state=NORMAL)
+    elif var5.get() == 0:
+        spinMargheritaPizza.configure(state=DISABLED)
+
+
+def chkBBQ():
+    if var6.get() == 1:
+        spinBBQChickenPizza.configure(state=NORMAL)
+    elif var6.get() == 0:
+        spinBBQChickenPizza.configure(state=DISABLED)
+
+
+def chkGarlic():
+    if var7.get() == 1:
+        spinGarlicCheesePizza.configure(state=NORMAL)
+    elif var7.get() == 0:
+        spinGarlicCheesePizza.configure(state=DISABLED)
+
+
+def chkVegeterian():
+    if var8.get() == 1:
+        spinVegeterianPizza.configure(state=NORMAL)
+    elif var8.get() == 0:
+        spinVegeterianPizza.configure(state=DISABLED)
+
+
+def chkNewYork():
+    if var9.get() == 1:
+        spinNewYorkerPizza.configure(state=NORMAL)
+    elif var9.get() == 0:
+        spinNewYorkerPizza.configure(state=DISABLED)
+
+
+def chkStuffed():
+    if var10.get() == 1:
+        spinStuffedCrustPizza.configure(state=NORMAL)
+    elif var10.get() == 0:
+        spinStuffedCrustPizza.configure(state=DISABLED)
+
+
+def chkSeafood():
+    if var11.get() == 1:
+        spinSeafoodPizza.configure(state=NORMAL)
+    elif var11.get() == 0:
+        spinSeafoodPizza.configure(state=DISABLED)
+
+
+def chkFries():
+    if var12.get() == 1:
+        spinFries.configure(state=NORMAL)
+    elif var12.get() == 0:
+        spinFries.configure(state=DISABLED)
+
+
+def chkChurros():
+    if var13.get() == 1:
+        spinChurros.configure(state=NORMAL)
+    elif var13.get() == 0:
+        spinChurros.configure(state=DISABLED)
+
+
+def chkWedges():
+    if var14.get() == 1:
+        spinWedges.configure(state=NORMAL)
+    elif var14.get() == 0:
+        spinWedges.configure(state=DISABLED)
+
+
+def chkNachos():
+    if var15.get() == 1:
+        spinNachos.configure(state=NORMAL)
+    elif var15.get() == 0:
+        spinNachos.configure(state=DISABLED)
+
+
+def chkSundae():
+    if var16.get() == 1:
+        spinSundae.configure(state=NORMAL)
+    elif var16.get() == 0:
+        spinSundae.configure(state=DISABLED)
+
+
+def chkWater():
+    if var17.get() == 1:
+        spinWater.configure(state=NORMAL)
+    elif var17.get() == 0:
+        spinWater.configure(state=DISABLED)
+
+
+def chkCoke():
+    if var18.get() == 1:
+        spinCoke.configure(state=NORMAL)
+    elif var18.get() == 0:
+        spinCoke.configure(state=DISABLED)
+
+
+def chkFanta():
+    if var19.get() == 1:
+        spinFanta.configure(state=NORMAL)
+    elif var19.get() == 0:
+        spinFanta.configure(state=DISABLED)
+
+
+def chkSprite():
+    if var20.get() == 1:
+        spinSprite.configure(state=NORMAL)
+    elif var20.get() == 0:
+        spinSprite.configure(state=DISABLED)
+
+
+def chkJuice():
+    if var21.get() == 1:
+        spinJuice.configure(state=NORMAL)
+    elif var21.get() == 0:
+        spinJuice.configure(state=DISABLED)
+
+
+def chkHamCheese():
+    if var25.get() == 1:
+        spinHamCheesePizza.configure(state=NORMAL)
+    elif var25.get() == 0:
+        spinHamCheesePizza.configure(state=DISABLED)
+
+
+# Total button
+def CostOfMeal():
+    meal1 = float(varCheesePizza.get())
+    meal2 = float(varHawaiianPizza.get())
+    meal3 = float(varMeatLoversPizza.get())
+    meal4 = float(varPepperoniPizza.get())
+    meal5 = float(varMargheritaPizza.get())
+    meal6 = float(varBBQChickenPizza.get())
+    meal7 = float(varGarlicCheesePizza.get())
+    meal8 = float(varVegeterianPizza.get())
+    meal9 = float(varNewYorkerPizza.get())
+    meal10 = float(varStuffedCrustPizza.get())
+    meal11 = float(varSeafoodPizza.get())
+    meal12 = float(varFries.get())
+    meal13 = float(varChurros.get())
+    meal14 = float(varWedges.get())
+    meal15 = float(varNachos.get())
+    meal16 = float(varSundae.get())
+    meal17 = float(varWater.get())
+    meal18 = float(varCoke.get())
+    meal19 = float(varFanta.get())
+    meal20 = float(varSprite.get())
+    meal21 = float(varJuice.get())
+    meal22 = float(varHamCheesePizza.get())
+    Phone = float(varPhoneNumber.get())
+
+    if (
+        meal1
+        + meal2
+        + meal3
+        + meal4
+        + meal5
+        + meal6
+        + meal7
+        + meal8
+        + meal9
+        + meal10
+        + meal11
+        + meal22
+        > 5
+    ):
+        messagebox.showinfo("Max Order", "Please Choose Less Than Five Pizzas")
+
+    else:
+        if meal12 + meal13 + meal14 + meal15 + meal16 > 5:
+            messagebox.showinfo("Max Order", "Please Choose Less Than Five Sides")
+        else:
+            if meal17 + meal18 + meal19 + meal20 + meal21 > 5:
+                messagebox.showinfo("Max Order", "Please Choose Less Than Five Drinks")
+            else:
+                if varName.get() == "":
+                    messagebox.showinfo("Name", "Please Insert A Name")
+                else:
+                    if Phone > 1000000000:
+                        messagebox.showinfo(
+                            "Phone Number", "Please Insert A Correct Phone Number"
+                        )
+                    else:
+                        if var23.get() == 1:
+                            varPayment.set("")
+                            iCost = (
+                                (meal1 * 7)
+                                + (meal2 * 7)
+                                + (meal3 * 7)
+                                + (meal4 * 7)
+                                + (meal5 * 7)
+                                + (meal6 * 7)
+                                + (meal7 * 14)
+                                + (meal8 * 14)
+                                + (meal9 * 14)
+                                + (meal10 * 14)
+                                + (meal11 * 14)
+                                + (meal12 * 2.50)
+                                + (meal13 * 3)
+                                + (meal14 * 3)
+                                + (meal15 * 4.50)
+                                + (meal16 * 3)
+                                + (meal17 * 1.50)
+                                + (meal18 * 2.50)
+                                + (meal19 * 2.50)
+                                + (meal20 * 2.50)
+                                + (meal21 * 3)
+                                + 3
+                            )
+                            iTax = (iCost * 15) / 100
+                            iTaxq = "$", str("%.2f" % (iTax))
+                            varTax.set(iTaxq)
+                            iCostq = "$", str("%.2f" % (iCost))
+                            varSubTotal.set(iCostq)
+                            iTotalq = "$", str("%.2f" % ((iCost + iTax)))
+                            varTotal.set(iTotalq)
+                        else:
+                            varPayment.set("")
+                            iCost = (
+                                (meal1 * 7)
+                                + (meal2 * 7)
+                                + (meal3 * 7)
+                                + (meal4 * 7)
+                                + (meal5 * 7)
+                                + (meal6 * 7)
+                                + (meal7 * 14)
+                                + (meal8 * 14)
+                                + (meal9 * 14)
+                                + (meal10 * 14)
+                                + (meal11 * 14)
+                                + (meal12 * 2.50)
+                                + (meal13 * 3)
+                                + (meal14 * 3)
+                                + (meal15 * 4.50)
+                                + (meal16 * 3)
+                                + (meal17 * 1.50)
+                                + (meal18 * 2.50)
+                                + (meal19 * 2.50)
+                                + (meal20 * 2.50)
+                                + (meal21 * 3)
+                            )
+                            iTax = (iCost * 15) / 100
+                            iTaxq = "$", str("%.2f" % (iTax))
+                            varTax.set(iTaxq)
+                            iCostq = "$", str("%.2f" % (iCost))
+                            varSubTotal.set(iCostq)
+                            iTotalq = "$", str("%.2f" % ((iCost + iTax)))
+                            varTotal.set(iTotalq)
+
+
+# Delivery Check
+def Delivery():
+    if var23.get() == 1:
+        txtAddress.configure(state=NORMAL)
+        txtPhoneNumber.configure(state=NORMAL)
+    elif var23.get() == 0:
+        txtAddress.configure(state=DISABLED)
+        txtPhoneNumber.configure(state=DISABLED)
+
+
+# ==============================================================================================Frame 1==================================================================================================================================
+# pizza menu
+
+lblMeal = Label(f1, font=("arial", 20, "bold"), text="Pizzas")
+lblMeal.grid(row=1, column=0)
+
+
+CheesePizza = Checkbutton(
+    f1,
+    text="Cheese\t\t$8.50\t",
+    variable=var1,
+    onvalue=1,
+    offvalue=0,
+    font=("arial", 18, "bold"),
+    command=chkCheese,
+).grid(row=2, column=0, sticky=W)
+spinCheesePizza = Spinbox(
+    f1,
+    font=("arial", 18, "bold"),
+    from_=0,
+    to=5,
+    width=6,
+    textvariable=varCheesePizza,
+    justify="right",
+    state=DISABLED,
+)
+spinCheesePizza.grid(row=2, column=2)
+
+HawaiianPizza = Checkbutton(
+    f1,
+    text="Hawaiian\t$8.50",
+    variable=var2,
+    onvalue=1,
+    offvalue=0,
+    font=("arial", 18, "bold"),
+    command=chkHawaiian,
+).grid(row=3, column=0, sticky=W)
+spinHawaiianPizza = Spinbox(
+    f1,
+    font=("arial", 18, "bold"),
+    from_=0,
+    to=5,
+    width=6,
+    textvariable=varHawaiianPizza,
+    justify="right",
+    state=DISABLED,
+)
+spinHawaiianPizza.grid(row=3, column=2)
+
+MeatLoversPizza = Checkbutton(
+    f1,
+    text="Meat Lovers\t$8.50",
+    variable=var3,
+    onvalue=1,
+    offvalue=0,
+    font=("arial", 18, "bold"),
+    command=chkMeat,
+).grid(row=4, column=0, sticky=W)
+spinMeatLoversPizza = Spinbox(
+    f1,
+    font=("arial", 18, "bold"),
+    from_=0,
+    to=5,
+    width=6,
+    textvariable=varMeatLoversPizza,
+    justify="right",
+    state=DISABLED,
+)
+spinMeatLoversPizza.grid(row=4, column=2)
+
+PepperoniPizza = Checkbutton(
+    f1,
+    text="Pepperoni\t$8.50",
+    variable=var4,
+    onvalue=1,
+    offvalue=0,
+    font=("arial", 18, "bold"),
+    command=chkPepperoni,
+).grid(row=5, column=0, sticky=W)
+spinPepperoniPizza = Spinbox(
+    f1,
+    font=("arial", 18, "bold"),
+    from_=0,
+    to=5,
+    width=6,
+    textvariable=varPepperoniPizza,
+    justify="right",
+    state=DISABLED,
+)
+spinPepperoniPizza.grid(row=5, column=2)
+
+MargheritaPizza = Checkbutton(
+    f1,
+    text="Margherita\t$8.50",
+    variable=var5,
+    onvalue=1,
+    offvalue=0,
+    font=("arial", 18, "bold"),
+    command=chkMargherita,
+).grid(row=6, column=0, sticky=W)
+spinMargheritaPizza = Spinbox(
+    f1,
+    font=("arial", 18, "bold"),
+    from_=0,
+    to=5,
+    width=6,
+    textvariable=varMargheritaPizza,
+    justify="right",
+    state=DISABLED,
+)
+spinMargheritaPizza.grid(row=6, column=2)
+
+BBQChickenPizza = Checkbutton(
+    f1,
+    text="BBQ Chicken\t$8.50",
+    variable=var6,
+    onvalue=1,
+    offvalue=0,
+    font=("arial", 18, "bold"),
+    command=chkBBQ,
+).grid(row=7, column=0, sticky=W)
+spinBBQChickenPizza = Spinbox(
+    f1,
+    font=("arial", 18, "bold"),
+    from_=0,
+    to=5,
+    width=6,
+    textvariable=varBBQChickenPizza,
+    justify="right",
+    state=DISABLED,
+)
+spinBBQChickenPizza.grid(row=7, column=2)
+
+GarlicCheesePizza = Checkbutton(
+    f1,
+    text="Cheesy Garlic\t$8.50",
+    variable=var7,
+    onvalue=1,
+    offvalue=0,
+    font=("arial", 18, "bold"),
+    command=chkGarlic,
+).grid(row=8, column=0, sticky=W)
+spinGarlicCheesePizza = Spinbox(
+    f1,
+    font=("arial", 18, "bold"),
+    from_=0,
+    to=5,
+    width=6,
+    textvariable=varGarlicCheesePizza,
+    justify="right",
+    state=DISABLED,
+)
+spinGarlicCheesePizza.grid(row=8, column=2)
+
+VegeterianPizza = Checkbutton(
+    f1,
+    text="Vegeterian\t$5",
+    variable=var8,
+    onvalue=1,
+    offvalue=0,
+    font=("arial", 18, "bold"),
+    command=chkVegeterian,
+).grid(row=9, column=0, sticky=W)
+spinVegeterianPizza = Spinbox(
+    f1,
+    font=("arial", 18, "bold"),
+    from_=0,
+    to=5,
+    width=6,
+    textvariable=varVegeterianPizza,
+    justify="right",
+    state=DISABLED,
+)
+spinVegeterianPizza.grid(row=9, column=2)
+
+NewYorkerPizza = Checkbutton(
+    f1,
+    text="New Yorker\t$5",
+    variable=var9,
+    onvalue=1,
+    offvalue=0,
+    font=("arial", 18, "bold"),
+    command=chkNewYork,
+).grid(row=10, column=0, sticky=W)
+spinNewYorkerPizza = Spinbox(
+    f1,
+    font=("arial", 18, "bold"),
+    from_=0,
+    to=5,
+    width=6,
+    textvariable=varNewYorkerPizza,
+    justify="right",
+    state=DISABLED,
+)
+spinNewYorkerPizza.grid(row=10, column=2)
+
+StuffedCrustPizza = Checkbutton(
+    f1,
+    text="Stuffed Crust\t$5",
+    variable=var10,
+    onvalue=1,
+    offvalue=0,
+    font=("arial", 18, "bold"),
+    command=chkStuffed,
+).grid(row=11, column=0, sticky=W)
+spinStuffedCrustPizza = Spinbox(
+    f1,
+    font=("arial", 18, "bold"),
+    from_=0,
+    to=5,
+    width=6,
+    textvariable=varStuffedCrustPizza,
+    justify="right",
+    state=DISABLED,
+)
+spinStuffedCrustPizza.grid(row=11, column=2)
+
+SeafoodPizza = Checkbutton(
+    f1,
+    text="Seafood\t\t$5",
+    variable=var11,
+    onvalue=1,
+    offvalue=0,
+    font=("arial", 18, "bold"),
+    command=chkSeafood,
+).grid(row=12, column=0, sticky=W)
+spinSeafoodPizza = Spinbox(
+    f1,
+    font=("arial", 18, "bold"),
+    from_=0,
+    to=5,
+    width=6,
+    textvariable=varSeafoodPizza,
+    justify="right",
+    state=DISABLED,
+)
+spinSeafoodPizza.grid(row=12, column=2)
+
+HamCheesePizza = Checkbutton(
+    f1,
+    text="Ham & Cheese\t$5",
+    variable=var25,
+    onvalue=1,
+    offvalue=0,
+    font=("arial", 18, "bold"),
+    command=chkHamCheese,
+).grid(row=13, column=0, sticky=W)
+spinHamCheesePizza = Spinbox(
+    f1,
+    font=("arial", 18, "bold"),
+    from_=0,
+    to=5,
+    width=6,
+    textvariable=varHamCheesePizza,
+    justify="right",
+    state=DISABLED,
+)
+spinHamCheesePizza.grid(row=13, column=2)
+# ==============================================================================================Frame 2==================================================================================================================================
+# sides menu
+lblMeal = Label(f2Top, font=("arial", 20, "bold"), text="Sides")
+lblMeal.grid(row=0, column=0)
+
+Fries = Checkbutton(
+    f2Top,
+    text="Fries\t$2.50\t",
+    variable=var12,
+    onvalue=1,
+    offvalue=0,
+    font=("arial", 18, "bold"),
+    command=chkFries,
+).grid(row=1, column=0, sticky=W)
+spinFries = Spinbox(
+    f2Top,
+    font=("arial", 18, "bold"),
+    from_=0,
+    to=5,
+    width=6,
+    textvariable=varFries,
+    justify="right",
+    state=DISABLED,
+)
+spinFries.grid(row=1, column=2)
+
+Churros = Checkbutton(
+    f2Top,
+    text="Churros\t$3.00",
+    variable=var13,
+    onvalue=1,
+    offvalue=0,
+    font=("arial", 18, "bold"),
+    command=chkChurros,
+).grid(row=2, column=0, sticky=W)
+spinChurros = Spinbox(
+    f2Top,
+    font=("arial", 18, "bold"),
+    from_=0,
+    to=5,
+    width=6,
+    textvariable=varChurros,
+    justify="right",
+    state=DISABLED,
+)
+spinChurros.grid(row=2, column=2)
+
+Wedges = Checkbutton(
+    f2Top,
+    text="Wedges\t$3.00",
+    variable=var14,
+    onvalue=1,
+    offvalue=0,
+    font=("arial", 18, "bold"),
+    command=chkWedges,
+).grid(row=3, column=0, sticky=W)
+spinWedges = Spinbox(
+    f2Top,
+    font=("arial", 18, "bold"),
+    from_=0,
+    to=5,
+    width=6,
+    textvariable=varWedges,
+    justify="right",
+    state=DISABLED,
+)
+spinWedges.grid(row=3, column=2)
+
+Nachos = Checkbutton(
+    f2Top,
+    text="Nachos\t$4.50",
+    variable=var15,
+    onvalue=1,
+    offvalue=0,
+    font=("arial", 18, "bold"),
+    command=chkNachos,
+).grid(row=4, column=0, sticky=W)
+spinNachos = Spinbox(
+    f2Top,
+    font=("arial", 18, "bold"),
+    from_=0,
+    to=5,
+    width=6,
+    textvariable=varNachos,
+    justify="right",
+    state=DISABLED,
+)
+spinNachos.grid(row=4, column=2)
+
+Sundae = Checkbutton(
+    f2Top,
+    text="Sundae\t$3.00",
+    variable=var16,
+    onvalue=1,
+    offvalue=0,
+    font=("arial", 18, "bold"),
+    command=chkSundae,
+).grid(row=5, column=0, sticky=W)
+spinSundae = Spinbox(
+    f2Top,
+    font=("arial", 18, "bold"),
+    from_=0,
+    to=5,
+    width=6,
+    textvariable=varSundae,
+    justify="right",
+    state=DISABLED,
+)
+spinSundae.grid(row=5, column=2)
+
+# ==============================================================================================Frame 3===============================================================================================================================
+# Drinks menu
+lblMeal = Label(f2Bottom, font=("arial", 20, "bold"), text="Drinks")
+lblMeal.grid(row=0, column=0)
+
+Water = Checkbutton(
+    f2Bottom,
+    text="Water\t$1.50",
+    variable=var17,
+    onvalue=1,
+    offvalue=0,
+    font=("arial", 18, "bold"),
+    command=chkWater,
+).grid(row=1, column=0, sticky=W)
+spinWater = Spinbox(
+    f2Bottom,
+    font=("arial", 18, "bold"),
+    from_=0,
+    to=5,
+    width=6,
+    textvariable=varWater,
+    justify="right",
+    state=DISABLED,
+)
+spinWater.grid(row=1, column=2)
+
+Coke = Checkbutton(
+    f2Bottom,
+    text="Coke\t$2.50",
+    variable=var18,
+    onvalue=1,
+    offvalue=0,
+    font=("arial", 18, "bold"),
+    command=chkCoke,
+).grid(row=2, column=0, sticky=W)
+spinCoke = Spinbox(
+    f2Bottom,
+    font=("arial", 18, "bold"),
+    from_=0,
+    to=5,
+    width=6,
+    textvariable=varCoke,
+    justify="right",
+    state=DISABLED,
+)
+spinCoke.grid(row=2, column=2)
+
+Fanta = Checkbutton(
+    f2Bottom,
+    text="Fanta\t$2.50",
+    variable=var19,
+    onvalue=1,
+    offvalue=0,
+    font=("arial", 18, "bold"),
+    command=chkFanta,
+).grid(row=3, column=0, sticky=W)
+spinFanta = Spinbox(
+    f2Bottom,
+    font=("arial", 18, "bold"),
+    from_=0,
+    to=5,
+    width=6,
+    textvariable=varFanta,
+    justify="right",
+    state=DISABLED,
+)
+spinFanta.grid(row=3, column=2)
+
+Sprite = Checkbutton(
+    f2Bottom,
+    text="Sprite\t$2.50",
+    variable=var20,
+    onvalue=1,
+    offvalue=0,
+    font=("arial", 18, "bold"),
+    command=chkSprite,
+).grid(row=4, column=0, sticky=W)
+spinSprite = Spinbox(
+    f2Bottom,
+    font=("arial", 18, "bold"),
+    from_=0,
+    to=5,
+    width=6,
+    textvariable=varSprite,
+    justify="right",
+    state=DISABLED,
+)
+spinSprite.grid(row=4, column=2)
+
+Juice = Checkbutton(
+    f2Bottom,
+    text="Juice\t$3.00\t",
+    variable=var21,
+    onvalue=1,
+    offvalue=0,
+    font=("arial", 18, "bold"),
+    command=chkJuice,
+).grid(row=5, column=0, sticky=W)
+spinJuice = Spinbox(
+    f2Bottom,
+    font=("arial", 18, "bold"),
+    from_=0,
+    to=5,
+    width=6,
+    textvariable=varJuice,
+    justify="right",
+    state=DISABLED,
+)
+spinJuice.grid(row=5, column=2)
+
+# ==============================================================================================Frame 4===============================================================================================================================
+
+lblMeal = Label(
+    f3Top,
+    font=("arial", 20, "bold"),
+    text="              Pickup or Delivery              ",
+)
+lblMeal.grid(row=0, column=0, columnspan=2)
+
+lblName = Label(f3Top, font=("arial", 14, "bold"), text="Name ", bd=3, anchor="w")
+lblName.grid(row=1, column=0, columnspan=2)
+txtName = Entry(
+    f3Top,
+    font=("arial", 18, "bold"),
+    textvariable=varName,
+    width=13,
+    justify="left",
+    state=NORMAL,
+).grid(row=2, column=0, columnspan=2)
+
+Pickup = Checkbutton(
+    f3Top,
+    text="Pickup",
+    variable=var22,
+    onvalue=1,
+    offvalue=0,
+    font=("arial", 18, "bold"),
+).grid(row=3, column=0, sticky=W)
+Delivery = Checkbutton(
+    f3Top,
+    text="Delivery",
+    variable=var23,
+    onvalue=1,
+    offvalue=0,
+    font=("arial", 18, "bold"),
+    command=Delivery,
+).grid(row=4, column=0, sticky=W)
+
+lblAddress = Label(f3Top, font=("arial", 14, "bold"), text="Address ", bd=1, anchor="w")
+lblAddress.grid(row=5, column=0, sticky=W)
+txtAddress = Entry(
+    f3Top,
+    font=("arial", 18, "bold"),
+    textvariable=varAddress,
+    width=16,
+    justify="left",
+    state=DISABLED,
+)
+txtAddress.grid(row=6, column=0, sticky=W)
+lblPhoneNumber = Label(
+    f3Top, font=("arial", 14, "bold"), text="Phone Number ", bd=1, anchor="w"
+)
+lblPhoneNumber.grid(row=5, column=1)
+txtPhoneNumber = Entry(
+    f3Top,
+    font=("arial", 18, "bold"),
+    textvariable=varPhoneNumber,
+    width=14,
+    justify="left",
+    state=DISABLED,
+)
+txtPhoneNumber.grid(row=6, column=1)
+
+# ==============================================================================================Frame 5===============================================================================================================================
+
+lblPaymentMethod = Label(
+    f3Bottom,
+    font=("arial", 14, "bold"),
+    text="Payment Method",
+    bd=10,
+    width=16,
+    anchor="w",
+)
+lblPaymentMethod.grid(row=0, column=0)
+
+
+cmbPaymentMethod = ttk.Combobox(
+    f3Bottom, textvariable=var24, state="readonly", font=("arial", 14, "bold"), width=11
+)
+cmbPaymentMethod["value"] = ("Cash", "Master Card", "Visa Card", "Debit Card")
+cmbPaymentMethod.current(0)
+cmbPaymentMethod.grid(row=1, column=0)
+
+lblTax = Label(f3Bottom, font=("arial", 14, "bold"), text="Tax   ", bd=10, anchor="w")
+lblTax.grid(row=0, column=1)
+txtTax = Entry(
+    f3Bottom,
+    font=("arial", 18, "bold"),
+    textvariable=varTax,
+    width=10,
+    justify="right",
+    state=DISABLED,
+)
+txtTax.grid(row=0, column=2)
+
+txtPayment = Entry(
+    f3Bottom,
+    font=("arial", 18, "bold"),
+    textvariable=varPayment,
+    width=6,
+    justify="right",
+)
+txtPayment.grid(row=2, column=0)
+lblSubTotal = Label(
+    f3Bottom, font=("arial", 14, "bold"), text="Sub Total", bd=10, width=8, anchor="w"
+)
+lblSubTotal.grid(row=1, column=1)
+txtSubTotal = Entry(
+    f3Bottom,
+    font=("arial", 18, "bold"),
+    textvariable=varSubTotal,
+    width=10,
+    justify="right",
+    state=DISABLED,
+)
+txtSubTotal.grid(row=1, column=2)
+
+lblTotal = Label(
+    f3Bottom, font=("arial", 14, "bold"), text="Total", bd=10, width=8, anchor="w"
+)
+lblTotal.grid(row=2, column=1)
+txtTotal = Entry(
+    f3Bottom,
+    font=("arial", 18, "bold"),
+    textvariable=varTotal,
+    width=10,
+    justify="right",
+    state=DISABLED,
+)
+txtTotal.grid(row=2, column=2)
+
+# ==============================================================================================Frame 5 Button===============================================================================================================================
+btnTotal = Button(
+    f3Bottom,
+    padx=16,
+    pady=1,
+    bd=4,
+    fg="black",
+    font=("arial", 16, "bold"),
+    width=4,
+    text="Total ",
+    command=CostOfMeal,
+).grid(row=4, column=0)
+
+btnReset = Button(
+    f3Bottom,
+    padx=16,
+    pady=1,
+    bd=4,
+    fg="black",
+    font=("arial", 16, "bold"),
+    width=4,
+    text="Reset ",
+    command=reset,
+).grid(row=4, column=1)
+
+btnExit = Button(
+    f3Bottom,
+    padx=16,
+    pady=1,
+    bd=4,
+    fg="black",
+    font=("arial", 16, "bold"),
+    width=4,
+    text="Exit",
+    command=lambda: iExit(),
+).grid(row=4, column=2)
+
+
+
+root.mainloop()
